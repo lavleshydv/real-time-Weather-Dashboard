@@ -1,221 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lavlesh Yadav - B.Tech CSE Student specializing in AI, ML, Backend Development, and Data Analytics. Explore my portfolio of projects and technical skills.">
-    <meta name="keywords" content="Lavlesh Yadav, portfolio, AI, Machine Learning, Backend Development, FastAPI, Python">
-    <meta name="author" content="Lavlesh Yadav">
-    <meta name="theme-color" content="#0f172a">
-    <meta property="og:title" content="Lavlesh Yadav - Portfolio">
-    <meta property="og:description" content="B.Tech CSE Student | AI & ML Enthusiast | Backend Developer">
-    <meta property="og:type" content="website">
-    <title>Lavlesh Yadav - Portfolio | AI & Backend Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='75' font-size='75' fill='%230f172a'%3E💻%3C/text%3E%3C/svg%3E">
+    <title>TO-DO LIST APPLICATION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <!-- Skip to main content link -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="glow-bg"></div>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-terminal"></i>
+                <h1>SET YOUR TASKS <span>// v1.0</span></h1>
+            </div>
+            <p class="subtitle">System status: <span class="status-online">Online</span></p>
+        </header>
 
-    <!-- Navigation Header -->
-    <header class="header" role="banner">
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
-            <div class="container nav-container">
-                <a href="index.html" class="logo" aria-current="page">LY</a>
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul id="navMenu" class="nav-menu" role="menubar">
-                    <li role="none"><a href="index.html" class="nav-link active" role="menuitem" aria-current="page">Home</a></li>
-                    <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
-                    <li role="none"><a href="projects.html" class="nav-link" role="menuitem">Projects</a></li>
-                    <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
-                </ul>
+        <form id="todo-form">
+            <div class="input-wrapper">
+                <span class="prompt-symbol">~ $</span>
+                <input type="text" id="todo-input" placeholder="Enter new task directive..." autocomplete="off"
+                    required>
+                <button type="submit" id="add-btn"><i class="fas fa-level-down-alt fa-rotate-90"></i></button>
             </div>
-        </nav>
-    </header>
+        </form>
 
-    <!-- Main Content -->
-    <main id="main-content" role="main">
-        <!-- Hero Section -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 id="hero-title" class="hero-title">Lavlesh Yadav</h1>
-                    <p class="hero-subtitle">B.Tech CSE Student | AI & ML Enthusiast | Backend Developer</p>
-                    <p class="hero-description">Crafting intelligent solutions with modern technology. Specializing in AI-powered applications, backend APIs, and data-driven systems.</p>
-                    <div class="hero-cta">
-                        <a href="projects.html" class="btn btn-primary" aria-label="View my projects">View My Work</a>
-                        <a href="contact.html" class="btn btn-secondary" aria-label="Contact me">Get In Touch</a>
-                    </div>
-                    <div class="social-links" role="list" aria-label="Social media links">
-                        <a href="https://linkedin.com/in/lavlesh-yadav-3a4aa4340" target="_blank" rel="noopener noreferrer" class="social-link" role="listitem" aria-label="LinkedIn profile">
-                            <span class="sr-only">LinkedIn</span>
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0h.001z"/>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/lavleshydv" target="_blank" rel="noopener noreferrer" class="social-link" role="listitem" aria-label="GitHub profile">
-                            <span class="sr-only">GitHub</span>
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                        <a href="mailto:umay81861@gmail.com" class="social-link" role="listitem" aria-label="Email me">
-                            <span class="sr-only">Email</span>
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-visual" aria-label="Profile illustration">
-                    <img
-                        src="assets/profile.jpg"
-                        alt="Lavlesh Yadav portrait"
-                        class="hero-photo"
-                    >
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Preview Section -->
-        <section class="skills-preview" aria-labelledby="skills-title">
-            <div class="container">
-                <h2 id="skills-title" class="section-title">Core Competencies</h2>
-                <div class="skills-grid">
-                    <article class="skill-card">
-                        <h3>Languages</h3>
-                        <ul role="list" aria-label="Programming languages">
-                            <li>Python</li>
-                            <li>C++</li>
-                            <li>SQL</li>
-                        </ul>
-                    </article>
-                    <article class="skill-card">
-                        <h3>Backend</h3>
-                        <ul role="list" aria-label="Backend technologies">
-                            <li>FastAPI</li>
-                            <li>Flask</li>
-                            <li>PostgreSQL</li>
-                        </ul>
-                    </article>
-                    <article class="skill-card">
-                        <h3>AI & ML</h3>
-                        <ul role="list" aria-label="Machine learning tools">
-                            <li>Scikit-learn</li>
-                            <li>TensorFlow</li>
-                            <li>LSTM & CNN</li>
-                        </ul>
-                    </article>
-                    <article class="skill-card">
-                        <h3>Tools & DevOps</h3>
-                        <ul role="list" aria-label="Development tools">
-                            <li>Git & GitHub</li>
-                            <li>VS Code</li>
-                            <li>NumPy & Pandas</li>
-                        </ul>
-                    </article>
-                </div>
-                <div class="section-cta">
-                    <a href="about.html" class="link-arrow">Learn more about my expertise</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Projects Section -->
-        <section class="featured-projects" aria-labelledby="featured-title">
-            <div class="container">
-                <h2 id="featured-title" class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>Autonomous Carbon-Aware Manufacturing</h3>
-                            <span class="badge">AI & Analytics</span>
-                        </div>
-                        <p>AI-powered manufacturing monitoring system with anomaly detection using knowledge graph architecture and REST APIs.</p>
-                        <div class="tech-tags" role="list" aria-label="Technologies used">
-                            <span role="listitem">Python</span>
-                            <span role="listitem">FastAPI</span>
-                            <span role="listitem">Knowledge Graph</span>
-                        </div>
-                    </article>
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>Human Activity Recognition</h3>
-                            <span class="badge">Deep Learning</span>
-                        </div>
-                        <p>Deep learning model for human activity recognition using CNN and LSTM for spatial and temporal feature extraction.</p>
-                        <div class="tech-tags" role="list" aria-label="Technologies used">
-                            <span role="listitem">CNN</span>
-                            <span role="listitem">LSTM</span>
-                            <span role="listitem">Python</span>
-                        </div>
-                    </article>
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>Spam Email Detection</h3>
-                            <span class="badge">ML Classification</span>
-                        </div>
-                        <p>Machine learning-based spam email classifier using Scikit-learn for text analysis and classification.</p>
-                        <div class="tech-tags" role="list" aria-label="Technologies used">
-                            <span role="listitem">Scikit-learn</span>
-                            <span role="listitem">NLP</span>
-                            <span role="listitem">Python</span>
-                        </div>
-                    </article>
-                </div>
-                <div class="section-cta">
-                    <a href="projects.html" class="btn btn-primary">View All Projects</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section" aria-labelledby="cta-title">
-            <div class="container">
-                <h2 id="cta-title" class="cta-title">Let's Build Something Amazing</h2>
-                <p class="cta-description">I'm actively seeking internship opportunities to apply my skills in real-world projects. Let's connect!</p>
-                <a href="contact.html" class="btn btn-primary btn-large">Start a Conversation</a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <section aria-labelledby="footer-about-title">
-                    <h3 id="footer-about-title">Lavlesh Yadav</h3>
-                    <p>B.Tech CSE Student | AI & Backend Developer</p>
-                    <p>Gwalior, Madhya Pradesh, India</p>
-                </section>
-                <nav aria-label="Footer navigation">
-                    <h4>Quick Links</h4>
-                    <ul role="list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-                <section aria-labelledby="footer-contact-title">
-                    <h4 id="footer-contact-title">Get In Touch</h4>
-                    <ul role="list">
-                        <li><a href="mailto:umay81861@gmail.com" aria-label="Email: umay81861@gmail.com">umay81861@gmail.com</a></li>
-                        <li><a href="tel:+918319035609" aria-label="Phone: +91-8319035609">+91-8319035609</a></li>
-                    </ul>
-                </section>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> Lavlesh Yadav. All rights reserved. Designed with accessibility in mind.</p>
-            </div>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">[ All ]</button>
+            <button class="filter-btn" data-filter="active">[ Active ]</button>
+            <button class="filter-btn" data-filter="completed">[ Completed ]</button>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="list-container">
+            <ul id="todo-list">
+                <!-- To-Do items will be generated here -->
+            </ul>
+        </div>
+
+        <div class="todo-footer">
+            <span id="items-left">0 processes running</span>
+            <button id="clear-completed"><i class="fas fa-trash"></i> Kill Completed</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
+
 </html>
