@@ -9,3 +9,4 @@ A beautiful, glassmorphism-styled Weather Dashboard built with Vanilla HTML, CSS
 
 ## How to Run
 Simply open `index.html` in your web browser. No local server required!
+## completed
