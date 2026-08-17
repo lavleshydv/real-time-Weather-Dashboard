@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Weather Dashboard</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <header>
+            <h1>Weather Dashboard</h1>
+            <p class="subtitle">Real-time metrics at your fingertips</p>
+        </header>
+
+        <main>
+            <div class="search-section">
+                <form id="weather-form">
+                    <input 
+                        type="text" 
+                        id="city-input" 
+                        placeholder="Enter city name..." 
+                        autocomplete="off"
+                        required
+                    />
+                    <button type="submit" id="search-btn">Search</button>
+                </form>
+            </div>
+
+            <div id="loading-spinner" class="hidden">
+                <div class="spinner"></div>
+                <p>Fetching data...</p>
+            </div>
+
+            <div id="error-message" class="hidden">
+                <p id="error-text">Failed to fetch data.</p>
+            </div>
+
+            <div id="weather-display" class="hidden">
+                <h2 id="city-name">City Name</h2>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">🌡️</div>
+                        <p class="metric-label">Temperature</p>
+                        <p class="metric-value" id="temperature">-- °C</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">💧</div>
+                        <p class="metric-label">Humidity</p>
+                        <p class="metric-value" id="humidity">-- %</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">💨</div>
+                        <p class="metric-label">Wind Speed</p>
+                        <p class="metric-value" id="wind-speed">-- km/h</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
